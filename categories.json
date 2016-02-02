@@ -37,7 +37,7 @@
 "temporalgranularitydetails":"Latency can be up to 8s if the door is closed",
 "spatialcoverage":"Space-Room",
 "temporalcoverage":"Now",
-"sensormodality":"Infrared Light-PIR,Magnetic Fields-REED Switch",
+"sensormodality":"Infrared Light-PIR,Magnetic Fields-Reed Switch",
 "sensingstrategy":"Augment the environment",
 "modelingstrategy":"Conditional Rules",
 "modelingstrategydetails":"Door Open->Occupied, Door Close -> If no PIR event -> Unoccupied",
@@ -415,7 +415,7 @@
 "temporalgranularity":"Periodic",
 "spatialcoverage":"Space-Room",
 "temporalcoverage":"Now",
-"sensormodality":"Ultrasound-Sonar,Infrared Light-PIR,Magnetic Fields-REED Switch",
+"sensormodality":"Ultrasound-Sonar,Infrared Light-PIR,Magnetic Fields-Reed Switch",
 "sensingstrategy":"Augment the environment",
 "modelingstrategy":"Conditional Rules,Stochastic Models",
 "evaluation":"Trial-Buildings-Accuracy-90%"
@@ -600,7 +600,7 @@
 "temporalgranularity":"Periodic",
 "spatialcoverage":"Building,Space-Room",
 "temporalcoverage":"Now",
-"sensormodality":"EM Waves-Radio-based Communication-RFID,Magnetic Fields-REED Switch,Visible Light-Light Level,Electricity-Meter,Water-Flow Meter",
+"sensormodality":"EM Waves-Radio-based Communication-RFID,Magnetic Fields-Reed Switch,Visible Light-Light Level,Electricity-Meter,Water-Flow Meter",
 "sensingstrategy":"augment objects, augment persons",
 "modelingstrategy":"Heuristics",
 "evaluation":"Trial-Building-Accuracy-87%"
