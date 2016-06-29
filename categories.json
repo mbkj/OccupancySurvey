@@ -26,7 +26,7 @@
 "sensormodality":"EM Waves-Radio-based Communication-WiFi,Sound-Microphone",
 "sensingstrategy":"Repurpose Infrastructure",
 "modelingstrategy":"Heuristics",
-"evaluation":"Trial-Building-PrecisionRecall-91.3%:93.7%"
+"evaluation":"Trial-Building-PrecisionRecall-91%:94%"
 },
 {
 "ID":"AgarwalBGLWW10",
@@ -84,7 +84,7 @@
 "sensormodality":"EM Waves-Radio-based Communication-WiFi",
 "sensingstrategy":"Repurpose Infrastructure",
 "modelingstrategy":"Heuristics",
-"evaluation":"Real-Buildings-ARatio-0.40:1.13"
+"evaluation":"Real-Buildings-ARatio-0.4:1.1"
 },
 
 {
@@ -142,7 +142,7 @@
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Stochastic Models,Agent-based Models",
 "modelingstrategydetails":"",
-"evaluation":"Lab-Spaces-RMSE-5.688"
+"evaluation":"Lab-Spaces-RMSE-5.7"
 },
 
 {
@@ -170,7 +170,7 @@
 "sensormodality":"Visible Light-Video Camera",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Heuristics",
-"evaluation":"Lab-Spaces-Accuracy-64.3%:92.9%"
+"evaluation":"Lab-Spaces-Accuracy-64%:93%"
 },
 
 {
@@ -225,7 +225,7 @@
 "sensormodality":"Electricity-Meter",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Machine Learning",
-"evaluation":"Lab-Spaces-Accuracy-92.39%"
+"evaluation":"Lab-Spaces-Accuracy-92%"
 },
 
 {
@@ -282,7 +282,7 @@
 "sensormodality":"Infrared Light-Thermal Camera,Infrared Light-PIR",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Machine Learning",
-"evaluation": "Lab-Spaces-RMSE-0.346"
+"evaluation": "Lab-Spaces-RMSE-0.35"
 },
 
 {
@@ -296,7 +296,7 @@
 "sensormodality":"EM Waves-Radio-based Communication-GPS",
 "sensingstrategy":"Augment Persons",
 "modelingstrategy":"Stochastic Models,Prediction Algorithms",
-"evaluation":"Trial-Building-Accuracy-92.1%"
+"evaluation":"Trial-Building-Accuracy-92%"
 },
 
 {
@@ -379,7 +379,7 @@
 "sensormodality":"Infrared Light-PIR,Electricity-Meter",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Stochastic Models",
-"evaluation":"Lab-Spaces-Accuracy-82.4%"
+"evaluation":"Lab-Spaces-Accuracy-82%"
 },
 
 {"ID":"Milenkovic2013",
@@ -405,7 +405,7 @@
 "sensormodality":"Infrared Light-PIR,Electricity-Meter",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Stochastic Models",
-"evaluation":"Lab-Spaces-Accuracy-66.3%"
+"evaluation":"Lab-Spaces-Accuracy-66%"
 },
 
 {"ID":"Hnat2012",
@@ -431,7 +431,7 @@
 "sensormodality":"EM Waves-Radio-based Communication-WiFi,Sound-Microphone,Electricity-Meter",
 "sensingstrategy":"Augment the Environment,Augment Persons",
 "modelingstrategy":"Machine Learning",
-"evaluation":"Trial-Building-PrecisionRecall-75.2%:77.8%"
+"evaluation":"Trial-Building-PrecisionRecall-75%:78%"
 },
 
 {"ID":"Duarte2013587",
@@ -523,7 +523,7 @@
 "sensormodality":"Occupant Data-Calendar,Force-Device Input,Air-Temperature,Infrared Light-PIR,Sound-Microphone,Air-Humidity,Visible Light-Light Level",
 "sensingstrategy":"Augment the Environment,Augment Objects,Repurpose Infrastructure",
 "modelingstrategy":"Machine Learning",
-"evaluation":"Lab-Spaces-Accuracy-64.6:95.5"
+"evaluation":"Lab-Spaces-Accuracy-65:96"
 },
 
 {"ID":"KleimingerBSS13",
@@ -590,7 +590,7 @@
 "sensormodality":"Ultrasound-Sonar",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Machine Learning",
-"evaluation":"Trial-Spaces-Error-2.17"
+"evaluation":"Trial-Spaces-Error-2.2"
 },
 
 {"ID":"Ranjan2014",
