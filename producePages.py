@@ -6,8 +6,8 @@ import matplotlib
 
 if __name__ == '__main__':
     
-    path = 'categories.json'
     results = {}
+    reflines = {}
     
     prettyprint = {"occupantrelation":"Occupant Relation",
                     "informationtype":"Information Type",
@@ -19,7 +19,20 @@ if __name__ == '__main__':
                     "sensingstrategy":"Sensing Strategy",
                     "modelingstrategy":"Modeling Strategy"}
     
-    f=open(path, 'r')
+    
+    f=open('occupancysurvey.bib', 'r')
+    i = 1
+    for line in f:      
+        if line.startswith("#"):
+            pass
+        else:            
+            if line.startswith("@"):
+                pubname = line[line.find("{")+1:(len(line)-2)]
+                reflines[pubname] = i
+        i = i + 1       
+    
+    
+    f=open('categories.json', 'r')
     lines = []
     for line in f:      
         if line.startswith("#"):
@@ -37,18 +50,23 @@ if __name__ == '__main__':
     # Print each subpage
     
     for key in prettyprint:
+        print "Producing: " + prettyprint[key]
         results = {}
         for obj in jsonobj["systems"]:
             for val in obj[key].split(","):                
                 valkey = val.split("-")[0]
                 if not valkey in results:
                     results[valkey] = []
-                results[valkey].append(obj["ID"])
+                for objkey in obj["ID"].split(","):
+                    results[valkey].append(objkey)
         
         graphdata = {}
         for subkey in results:
             graphdata[subkey] = len(results[subkey])
-            print " * ***%s (%i)*** [%s]" % (subkey,len(results[subkey]),",".join(results[subkey]))
+            refentries = []
+            for refentry in results[subkey]:
+                refentries.append("[[%s|https://github.com/mbkj/OccupancySurvey/blob/master/occupancysurvey.bib#L%i]]" % (refentry,reflines[refentry]))
+            print " * ***%s (%i)*** %s" % (subkey,len(results[subkey]),",".join(refentries))
                     
         graphkeys = graphdata.keys()
         graphvalues = graphdata.values()
