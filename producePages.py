@@ -7,7 +7,7 @@ import matplotlib
 if __name__ == '__main__':
     
     results = {}
-    reflines = {}
+    
     
     prettyprint = {"occupantrelation":"Occupant Relation",
                     "informationtype":"Information Type",
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                     "sensingstrategy":"Sensing Strategy",
                     "modelingstrategy":"Modeling Strategy"}
     
-    
+    reflines = {}
     f=open('occupancysurvey.bib', 'r')
     i = 1
     for line in f:      
@@ -31,6 +31,17 @@ if __name__ == '__main__':
                 reflines[pubname] = i
         i = i + 1       
     
+    catlines = {}
+    f=open('categories.json', 'r')
+    i = 1
+    for line in f:      
+        if line.startswith("#"):
+            pass
+        else:            
+            if '"ID":' in line:
+                for pubname in line[line.find('":"')+3:(len(line)-3)].split(","):
+                    catlines[pubname] = i
+        i = i + 1
     
     f=open('categories.json', 'r')
     lines = []
@@ -65,7 +76,7 @@ if __name__ == '__main__':
             graphdata[subkey] = len(results[subkey])
             refentries = []
             for refentry in results[subkey]:
-                refentries.append("[[%s|https://github.com/mbkj/OccupancySurvey/blob/master/occupancysurvey.bib#L%i]]" % (refentry,reflines[refentry]))
+                refentries.append("[[%s|https://github.com/mbkj/OccupancySurvey/blob/master/categories.json#L%i]]([[bib|https://github.com/mbkj/OccupancySurvey/blob/master/occupancysurvey.bib#L%i]])" % (refentry,catlines[refentry],reflines[refentry]))
             print " * ***%s (%i)*** %s" % (subkey,len(results[subkey]),",".join(refentries))
                     
         graphkeys = graphdata.keys()
