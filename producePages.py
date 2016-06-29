@@ -50,7 +50,6 @@ if __name__ == '__main__':
             graphdata[subkey] = len(results[subkey])
             print " * ***%s (%i)*** [%s]" % (subkey,len(results[subkey]),",".join(results[subkey]))
                     
-        pp = PdfPages(key + '.pdf')
         graphkeys = graphdata.keys()
         graphvalues = graphdata.values()
         y_pos = np.arange(len(graphkeys))
@@ -58,8 +57,7 @@ if __name__ == '__main__':
         plt.yticks(y_pos, graphkeys)
         plt.xlabel('Number of Examples')
         plt.title('Classification of ' + prettyprint[key])
-        plt.savefig(pp, format='pdf', bbox_inches='tight')
+        plt.savefig(key + '.png', format='png', bbox_inches='tight')
         plt.close()
-        pp.close()
     
     
