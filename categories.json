@@ -124,7 +124,7 @@
 "temporalgranularity":"Periodic",
 "spatialcoverage":"Space-{Room}",
 "temporalcoverage":"Present",
-"sensormodality":"Air-Temperature,Air-Humidity,Sound-Microphone,Infrared Light-PIR,Visible Light-Light Level,Force-Pressure,Visible Light-Video Camera",
+"sensormodality":"Air-CO2,Air-Temperature,Air-Humidity,Sound-Microphone,Infrared Light-PIR,Visible Light-Light Level,Force-Pressure,Visible Light-Video Camera",
 "sensingstrategy":"Augment the Environment",
 "modelingstrategy":"Stochastic Models-GMM-Supervised",
 "evaluation":"Lab-Spaces-Accuracy-82%"
