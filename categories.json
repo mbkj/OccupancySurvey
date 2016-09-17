@@ -126,7 +126,7 @@
 "temporalcoverage":"Present",
 "sensormodality":"Air-CO2,Air-Temperature,Air-Humidity,Sound-Microphone,Infrared Light-PIR,Visible Light-Light Level,Force-Pressure,Visible Light-Video Camera",
 "sensingstrategy":"Augment the Environment",
-"modelingstrategy":"Stochastic Models-GMM-Supervised",
+"modelingstrategy":"Stochastic Models",
 "evaluation":"Lab-Spaces-Accuracy-82%"
 },
 
@@ -211,7 +211,7 @@
 "temporalcoverage":"Present",
 "sensormodality":"EM Waves-Radio-based Communication-WiFi,Force-Device Input,Occupant Data-Social Networking,Occupant Data-Calendar",
 "sensingstrategy":"Repurpose Infrastructure,Augment Objects",
-"modelingstrategy":"Machine Learning-Supervised",
+"modelingstrategy":"Machine Learning",
 "evaluation":"Lab-Spaces-Accuracy-88%"
 },
 {
@@ -604,8 +604,33 @@
 "sensingstrategy":"Augment Objects,Augment Persons",
 "modelingstrategy":"Heuristics",
 "evaluation":"Trial-Building-Accuracy-87%"
-}
+},
 
+{"ID":"Sangogboye2016a",
+"occupantrelation":"Anonymous",
+"informationtype":"Presence-Count",
+"spatialgranularity":"Building,Space-Room",
+"temporalgranularity":"Periodic",
+"spatialcoverage":"Building,Space-Room",
+"temporalcoverage":"Present",
+"sensormodality":"Visible Light-Stereo Camera",
+"sensingstrategy":"Augment the Environment",
+"modelingstrategy":"Stochastic Models",
+"evaluation":"Trial-Building-RMSE-0.78"
+},
+
+{"ID":"Kjaergaard2016",
+"occupantrelation":"Anonymous",
+"informationtype":"Presence-Count",
+"spatialgranularity":"Building,Space-Room",
+"temporalgranularity":"Periodic",
+"spatialcoverage":"Building,Space-Room",
+"temporalcoverage":"Present",
+"sensormodality":"Infrared Light-PIR",
+"sensingstrategy":"Repurpose Infrastructure",
+"modelingstrategy":"Heuristics",
+"evaluation":"Trial-Building-RMSE-21.7"
+}
 
 
 ]

@@ -15,7 +15,7 @@ if __name__ == '__main__':
                     "temporalgranularity":"Temporal Granularity",
                     "spatialcoverage":"Spatial Coverage",
                     "temporalcoverage":"Temporal Coverage",
-                    "sensormodality":"Sensor Modality",
+                    #"sensormodality":"Sensor Modality",
                     "sensingstrategy":"Sensing Strategy",
                     "modelingstrategy":"Modeling Strategy"}
     
