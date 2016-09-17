@@ -15,7 +15,7 @@ if __name__ == '__main__':
                     "temporalgranularity":"Temporal Granularity",
                     "spatialcoverage":"Spatial Coverage",
                     "temporalcoverage":"Temporal Coverage",
-                    #"sensormodality":"Sensor Modality",
+                    "sensormodality":"Sensor Modality",
                     "sensingstrategy":"Sensing Strategy",
                     "modelingstrategy":"Modeling Strategy"}
     
@@ -57,6 +57,19 @@ if __name__ == '__main__':
     
     for val in prettyprint.values():
         print " * [[%s|%s]]" % (val,val)
+    
+    
+    #Print paper list
+    
+    print "System List"
+    for obj in jsonobj["systems"]:
+        papers = []
+        for objkey in obj["ID"].split(","):
+            papers.append(objkey)
+        refentries = []
+        for refentry in papers:
+            refentries.append("[[%s|https://github.com/mbkj/OccupancySurvey/blob/master/categories.json#L%i]]([[bib|https://github.com/mbkj/OccupancySurvey/blob/master/occupancysurvey.bib#L%i]])" % (refentry,catlines[refentry],reflines[refentry]))
+        print " * %s" % (",".join(refentries))    
         
     # Print each subpage
     
